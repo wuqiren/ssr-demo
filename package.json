@@ -1,0 +1,28 @@
+{
+  "name": "ssr-demo",
+  "version": "1.0.0",
+  "description": "ssr学习的demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wuqiren/ssr-demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wuqiren/ssr-demo/issues"
+  },
+  "homepage": "https://github.com/wuqiren/ssr-demo#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^17.2.0",
+    "@commitlint/config-conventional": "^17.2.0",
+    "@typescript-eslint/eslint-plugin": "^5.42.0",
+    "@typescript-eslint/parser": "^5.42.0",
+    "eslint": "^8.26.0",
+    "eslint-plugin-react": "^7.31.10",
+    "husky": "^8.0.1"
+  }
+}
