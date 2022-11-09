@@ -7,6 +7,8 @@ import {Route,Routes} from 'react-router-dom';
 import {StaticRouter} from 'react-router-dom/server';
 import router from '@/router'
 import { Helmet  } from "react-helmet";
+import { serverStore } from '@/store'
+import { Provider } from 'react-redux'
 const app = express();
 
 const bodyParse = require('body-parser');
@@ -23,6 +25,7 @@ app.post("/api/getDemoData",(req,res)=>{
 })
 app.get("*", (req, res) => {
   const content = renderToString(
+    <Provider store={serverStore}>
     <StaticRouter location={req.path}>
       <Routes>
         {
@@ -32,6 +35,7 @@ app.get("*", (req, res) => {
         }
       </Routes>
     </StaticRouter>
+    </Provider>
   );
   const helmet = Helmet.renderStatic()
   res.send(`
